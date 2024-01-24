@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>AI Image Genarator with openAI</title>
+    <link type="text/css" href="../static/css/reset.css" rel="stylesheet">
+    <link type="text/css" href="../static/css/style.css" rel="stylesheet">
+    <script src="../static/js/fabric.js"></script>
+    <script src="../static/js/translate.js"></script>
+    <script src="../static/js/script_ui.js"></script>
+    <script src="../static/js/script_server.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <h1>AI Image Genarator</h1>
+        <h2>with openAI API (DALL·E)</h2>
+
+        <div class="ai__type">
+            <div class="typebox" id="type__create">
+                <img src="../static/img/ico_create.png" alt="create">
+                <h3>이미지 생성</h3>
+                <p>새로운 이미지를 생성합니다.</p>
+                <button data-type="create">생성하기</button>
+            </div>
+        </div>
+
+        <div class="popup create">
+            <div class="content">
+                <button class="popup__close" id="close__create">
+                    <img src="../static/img/popup_close.png" alt="close">
+                </button>
+                <h2 class="popup__title">이미지 생성</h2>
+                <p class="popup__subtext">생성하고 싶은 이미지의 단어나 문장을 적어보세요.</p>
+                <div class="inputbox">
+                    <select name="create__select__ea" id="create__select__ea">
+                        <option value="">생성수량</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                    <select name="create__select__size" id="create__select__size">
+                        <option value="none">생성크기</option>
+                        <option value="256x256">256x256</option>
+                        <option value="512x512">512x512</option>
+                        <option value="1024x1024">1024x1024</option>
+                    </select>
+                    <input type="text" placeholder="예시) 웃으면서 걷는 토끼, 바다 배경, 만화체" id="create__input">
+                    <button onClick="activeCreateImage()">생성</button>
+                </div>
+                <div class="generatebox">
+                    <!-- <div class="imgbox"><img src="../img_ai/create/110323103510GXRo.jpg" alt=""></div> -->
+                    <!-- <div class="loader__wrap"><div class="loader"><span></span></div></div> -->
+                </div>
+            </div>
+            <div class="bg"></div>
+        </div>
+
+        <video class="bg-video" autoplay muted loop>
+            <source src="../static/video/bgVideo1.mp4" type="video/mp4">
+        </video>
+
+        <footer>
+            copyright(c)2024 webcorgi All right Reserved.
+        </footer>
+</body>
+
+</html>
